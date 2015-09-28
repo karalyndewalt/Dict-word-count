@@ -10,11 +10,13 @@ def word_count(file_path):
             word = word.lower()
             word = word.strip()
             word = word.strip("?.,:;!'\"_()-__")
+
+            unique_words[word] = unique_words.get(word, 0) + 1
             
-            if word in unique_words:
-                unique_words[word] += 1
-            else:
-                unique_words[word] = 1
+            # if word in unique_words:
+            #     unique_words[word] += 1
+            # else:
+            #     unique_words[word] = 1
     return unique_words
 
 
